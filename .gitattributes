@@ -1,0 +1,3 @@
+dist/index.html -linguist-vendored
+dist/style.css -linguist-vendored
+dist/app.js -linguist-vendored

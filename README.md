@@ -11,7 +11,7 @@ Acervo de shows completos no YouTube e de agendas de turnês. O projeto nasceu d
 - Links que abrem diretamente na aba de cada artista.
 - Controle de animações com preferência salva no navegador.
 
-## Como rodar localmente
+## Testar no seu computador
 
 O projeto usa HTML, CSS e JavaScript. Abra `dist/index.html` no navegador para consultar o acervo e acessar os vídeos no YouTube. Para testar a reprodução incorporada, sirva a pasta por HTTP:
 
@@ -19,4 +19,4 @@ O projeto usa HTML, CSS e JavaScript. Abra `dist/index.html` no navegador para c
 python -m http.server 8000 --directory dist
 ```
 
-Abra [localhost:8000](http://localhost:8000). A hospedagem é feita pelo Netlify, com `dist/` como pasta de publicação.
+Depois de iniciar o servidor, abra `http://localhost:8000` no mesmo computador. Para acessar a versão online de qualquer dispositivo, use o [site publicado no Netlify](https://entre-palcos.netlify.app/). A pasta de publicação é `dist/`.

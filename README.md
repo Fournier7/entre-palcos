@@ -1,6 +1,6 @@
 # 🎤 Entre Palcos
 
-Escolha um artista para encontrar shows completos e consultar as próximas datas em um só lugar. O acervo reúne **31 gravações de seis artistas**: Louis Tomlinson, Jão, Taylor Swift, One Direction, Sabrina Carpenter e Olivia Rodrigo.
+Escolha um artista para encontrar shows completos e consultar as próximas datas em um só lugar. O acervo reúne **31 gravações de seis artistas**.
 
 **[Acessar o site publicado](https://entre-palcos.netlify.app/)**
 

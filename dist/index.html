@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1c1020">
+  <meta name="description" content="Shows completos no YouTube e agenda de Louis Tomlinson, Jão, Taylor Swift, One Direction, Sabrina Carpenter e Olivia Rodrigo.">
+  <title>Entre Palcos | Shows completos e agenda</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23ff67a8'/%3E%3Cpath d='M10 17v6m5-11v16m5-20v24m5-20v16m5-11v6' stroke='%23150b12' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#acervo">Pular para o acervo</a>
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="brand" href="#inicio" aria-label="Entre Palcos, início">
+        <svg viewBox="0 0 36 36" aria-hidden="true"><rect width="36" height="36" rx="9" fill="currentColor"/><path d="M8 15v6m5-10v14m5-18v22m5-18v14m5-10v6" stroke="#160a12" stroke-width="2.4" stroke-linecap="round"/></svg>
+        Entre Palcos
+      </a>
+      <nav aria-label="Seções"><a href="#acervo">Shows completos</a><a href="#agenda">Agenda</a></nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-inner">
+        <div class="feature-copy">
+          <p class="feature-label">Show em destaque</p>
+          <p class="feature-artist">Louis Tomlinson</p>
+          <h1 id="hero-title">Away From Home <em>Festival</em></h1>
+          <p class="feature-meta">Londres · 2021</p>
+          <p class="hero-copy">Show completo e bastidores da primeira edição do festival.</p>
+          <div class="feature-actions">
+            <a class="cta" id="feature-watch" href="https://www.youtube.com/watch?v=Hjhhdd4N4mQ">Assistir no YouTube</a>
+            <a class="feature-more" href="#acervo">Ver acervo</a>
+          </div>
+        </div>
+        <figure class="feature-image">
+          <img id="feature-photo" src="https://i.ytimg.com/vi/Hjhhdd4N4mQ/maxresdefault.jpg" alt="Louis Tomlinson no palco do Away From Home Festival" width="1280" height="720" fetchpriority="high">
+          <figcaption>Londres, Reino Unido <span>Postado por fãs</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <div class="wrap content" id="acervo">
+      <div class="switcher">
+        <div class="tabs" role="tablist" aria-label="Artistas">
+          <button role="tab" id="tab-louis" aria-selected="true" aria-controls="artista" type="button" data-artist="louis">Louis Tomlinson</button>
+          <button role="tab" id="tab-jao" aria-selected="false" aria-controls="artista" type="button" data-artist="jao" tabindex="-1">Jão</button>
+          <button role="tab" id="tab-taylor" aria-selected="false" aria-controls="artista" type="button" data-artist="taylor" tabindex="-1">Taylor Swift</button>
+          <button role="tab" id="tab-onedirection" aria-selected="false" aria-controls="artista" type="button" data-artist="onedirection" tabindex="-1">One Direction</button>
+          <button role="tab" id="tab-sabrina" aria-selected="false" aria-controls="artista" type="button" data-artist="sabrina" tabindex="-1">Sabrina Carpenter</button>
+          <button role="tab" id="tab-olivia" aria-selected="false" aria-controls="artista" type="button" data-artist="olivia" tabindex="-1">Olivia Rodrigo</button>
+        </div>
+      </div>
+      <div class="columns" role="tabpanel" id="artista" aria-labelledby="tab-louis">
+        <section class="shows" aria-labelledby="shows-title">
+          <div class="section-heading">
+            <h2 id="shows-title">Shows completos</h2>
+            <span id="video-count" class="count"></span>
+          </div>
+          <div class="cards" id="videos"></div>
+        </section>
+        <aside id="agenda" aria-labelledby="agenda-title">
+          <div class="section-heading">
+            <h2 id="agenda-title">Agenda</h2>
+          </div>
+          <div class="agenda-box">
+            <div class="agenda-title" id="tour"></div>
+            <div id="dates"></div>
+            <p class="checked" id="tour-source" hidden><a target="_blank" rel="noopener noreferrer"></a></p>
+            <p class="checked">Agenda conferida em <time datetime="2026-11-23">23 nov. 2026</time>.</p>
+          </div>
+        </aside>
+      </div>
+      <noscript>Ative o JavaScript para alternar entre os artistas e assistir aos shows.</noscript>
+    </div>
+  </main>
+
+  <footer><div class="wrap"><span>Entre Palcos</span><span>Acervo independente · Vídeos hospedados no YouTube</span><button class="motion-toggle" id="motion-toggle" type="button" aria-pressed="false" hidden>Animações</button></div></footer>
+
+  <dialog id="player" aria-labelledby="player-title">
+    <div class="player-head"><h2 id="player-title"></h2><button id="close-player" aria-label="Fechar vídeo" type="button">×</button></div>
+    <div class="screen" id="screen"></div>
+    <div class="player-footer"><p id="player-status" aria-live="polite"></p><a id="player-link" class="out">Assistir no YouTube</a></div>
+  </dialog>
+</body>
+</html>
